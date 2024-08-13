@@ -53,8 +53,9 @@ Project History
 ## Getting Started
 
 **Clone the Repository**:
-```git clone https://github.com/willie191998/semantic-search.git
-cd semantic-search-engine```
+
+```git clone https://github.com/willie191998/semantic-search.git```
+```cd semantic-search-engine```
 
 **Install Dependencies**:
 
