@@ -1,10 +1,10 @@
-### Semantic Search Engine for Websites
+# Semantic Search Engine for Websites
 
 ## Overview
 
 This project is an AI-powered semantic search engine designed for website integration. It leverages advanced machine learning models from HuggingFace to provide highly relevant search results based on semantic similarity rather than just keyword matching. The engine is designed to handle website articles, offering users a more intelligent and context-aware search experience.
 
-# Key Features
+### Key Features
 **AI-Powered Search**:
 
 Utilizes HuggingFace's sentence-transformers/all-MiniLM-L6-v2 model for generating vector embeddings of article content.
@@ -21,9 +21,9 @@ The HuggingFace model was selected based on its balance of size and accuracy, ma
 **Website Integration**:
 Easily integrates into any website, with a working example at Superearner.
 
-# How It Works
+## How It Works
 **Vector Embeddings**
-Each article's title, keywords, and summary are converted into vector embeddings using the pretrained 'sentence-transformers/all-MiniLM-L6-v2' model from HuggingFace.
+Each article's title, keywords, and summary are converted into vector embeddings using the pretrained `sentence-transformers/all-MiniLM-L6-v2` model from HuggingFace.
 
 **Storage**:
 These embeddings are stored in AWS DynamoDB, taking advantage of its fast read/write capabilities. The embeddings are designed to fit within DynamoDB's attribute limits.
@@ -37,7 +37,7 @@ Articles with embeddings that exceed a similarity threshold are retrieved and pr
 **Integration**:
 The search engine has been successfully integrated into Superearner and is designed to be easily adaptable for other websites.
 
-# HuggingFace Model
+## HuggingFace Model
 The project utilizes the sentence-transformers/all-MiniLM-L6-v2 model from HuggingFace, a pretrained transformer model known for its compact size and high accuracy. This model was chosen specifically for its ability to deliver powerful semantic search capabilities without the overhead of larger models.
 
 **Model**: sentence-transformers/all-MiniLM-L6-v2
@@ -50,15 +50,15 @@ Project History
 **Development Start**: 2021
 **Current Status**: Actively maintained with ongoing improvements.
 
-# Getting Started
+## Getting Started
 
 **Clone the Repository**:
-'''git clone https://github.com/willie191998/semantic-search.git
-cd semantic-search-engine'''
+```git clone https://github.com/willie191998/semantic-search.git
+cd semantic-search-engine```
 
 **Install Dependencies**:
 
-'''pip install -r requirements.txt'''
+```pip install -r requirements.txt```
 
 **Configure AWS**:
 Ensure your AWS credentials are set up for accessing DynamoDB.
@@ -67,7 +67,7 @@ Ensure your AWS credentials are set up for accessing DynamoDB.
 Populate the database with vector embeddings of your website's articles.
 Start the search engine service to begin handling search queries.
 
-# Integration Guide
+## Integration Guide
 
 **Prepare Your Data**:
 Convert your website's article titles, keywords, and summaries into vector embeddings using the provided scripts.
@@ -85,5 +85,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 Contributions are welcome! Please feel free to submit issues or pull requests.
 
 ## Acknowledgments
-**HuggingFace**: For providing the pretrained model 'sentence-transformers/all-MiniLM-L6-v2' used in this project.
+**HuggingFace**: For providing the pretrained model `sentence-transformers/all-MiniLM-L6-v2` used in this project.
+
 **AWS**: For providing the infrastructure through DynamoDB to store and retrieve vector embeddings.
